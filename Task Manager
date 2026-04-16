@@ -1,0 +1,8 @@
+import json
+import os
+from datetime import datetime
+
+class TaskManager:
+    def __init__(self, storage_file='tasks.json'):
+        self.storage_file = storage_file
+        self.tasks = self.load_tasks()
